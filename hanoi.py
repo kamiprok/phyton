@@ -49,7 +49,7 @@ def hanoiMain():
                 hanoi(n, A, B, C)
                 end = time.time()
                 print('\nLiczba ruchów: ', count)
-                print('Czas: ', round(end - start, 2))
+                print('Czas: ', round(end - start, 4))
                 hanoi_menu()
             else:
                 print('Podaj liczbę od 1 do 14')
