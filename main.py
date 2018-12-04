@@ -179,7 +179,6 @@ def menu():
                     choice = input('Zły wybór. Wybierz ponownie: ')
 
         def hanoiMain():
-            start = time.time()
             powtorz = 0
             while powtorz == 0:
                 global count
@@ -198,20 +197,21 @@ def menu():
                 try:
                     n = int(input('Podaj liczbę dysków [n]: '))
                 except ValueError:
-                    print('To nie jest liczba!')
+                    print('To nie jest liczba')
                 else:
-                    if n > 0 and n < 150:
+                    if n > 0 and n < 20:
                         A = list(range(n, 0, -1))
                         B, C = [], []
                         print(A, B, C)
                         count = 0
+                        start = time.time()
                         hanoi(n, A, B, C)
-                        print('\nLiczba ruchów: ', count)
                         end = time.time()
-                        print('Czas: ', round(end - start, 2), 'sec')
+                        print('\nLiczba ruchów: ', count)
+                        print('Czas: ', round(end - start, 2))
                         hanoi_menu()
                     else:
-                        print('podaj liczbę od 1 do 14')
+                        print('Podaj liczbę od 1 do 14')
 
         hanoiMain()
     if x == '5':
