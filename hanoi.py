@@ -1,4 +1,27 @@
+import os
+import sys
+import time
+
+def hanoi_menu():
+    print('\nMenu: ')
+    print("1. Powtórz ")
+    print('e. Exit ')
+    choice = input("\nWybierz opcję: ")
+    loop = True
+    while loop:
+        if choice == '1':
+            loop = False
+            os.system('cls')
+            hanoiMain()
+        if choice == 'e':
+            loop = False
+            os.system('cls')
+            menu()
+        else:
+            choice = input('Zły wybór. Wybierz ponownie: ')
+
 def hanoiMain():
+    start = time.time()
     powtorz = 0
     while powtorz == 0:
         global count
@@ -14,19 +37,20 @@ def hanoiMain():
             hanoi(n-1, P2, P1, P3)
 
         try:
-            n = int(input('podaj liczbę dysków [n]: '))
+            n = int(input('Podaj liczbę dysków [n]: '))
         except ValueError:
             print('To nie jest liczba')
         else:
-            if n > 0 and n < 15:
+            if n > 0 and n < 150:
                 A = list(range(n,0,-1))
                 B, C = [], []
                 print(A, B, C)
                 count = 0
                 hanoi(n, A, B, C)
                 print('\nLiczba ruchów: ', count)
-                if input('\nJeszcze raz?  [y/n]: ') == 'n':
-                    powtorz = 1
+                end = time.time()
+                print('Czas: ', round(end - start, 2))
+                hanoi_menu()
             else:
-                print('podaj liczbę od 1 do 14')
+                print('Podaj liczbę od 1 do 14')
 hanoiMain()
