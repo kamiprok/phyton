@@ -27,8 +27,8 @@ def horner():
         except ValueError:
             print('To nie jest liczba!')
         else:
-            if n < 1 and n > 21:
-                print('Podaj liczbę z przedziału (2 - 20)')
+            if n < 2 or n > 12:
+                print('Podaj liczbę z przedziału (2 - 12)')
             else:
                 print('Wybrano :', n)
                 y = n

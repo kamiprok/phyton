@@ -94,8 +94,8 @@ def menu():
                 except ValueError:
                     print('To nie jest liczba!')
                 else:
-                    if n < 1 and n > 21:
-                        print('Podaj liczbę z przedziału (2 - 20)')
+                    if n < 2 or n > 12:
+                        print('Podaj liczbę z przedziału (2 - 12)')
                     else:
                         print('Wybrano :', n)
                         y = n
@@ -199,7 +199,7 @@ def menu():
                 except ValueError:
                     print('To nie jest liczba')
                 else:
-                    if n > 0 and n < 20:
+                    if n > 0 and n < 21:
                         A = list(range(n, 0, -1))
                         B, C = [], []
                         print(A, B, C)
@@ -211,7 +211,7 @@ def menu():
                         print('Czas: ', round(end - start, 4))
                         hanoi_menu()
                     else:
-                        print('Podaj liczbę od 1 do 14')
+                        print('Podaj liczbę od 1 do 20')
 
         hanoiMain()
     if x == '5':
