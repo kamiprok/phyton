@@ -145,10 +145,10 @@ def menu():
 
                                         print('Wynik: ')
                                         print('( x -', c, ')( ', end="")
-                                        for i in range(1, n):
-                                            print(tablica2[i - 1], 'x ^', m, ' + ', end="")
+                                        for i in range(0, n - 1):
+                                            print(tablica2[i], 'x ^', m, ' +  ', end='')
                                             m = m - 1
-                                        print(tablica2[i], ") i ", tablica2[i + 1], ' reszty.')
+                                        print(tablica2[-3], 'x +  ', tablica2[-2], ')  i ', tablica2[-1], ' reszty.')
                                         print('\n ### KONIEC ### ')
                                         horner_menu()
                                     else:
