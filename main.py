@@ -17,6 +17,7 @@ def menu():
     x = input()
     if x == '1':
         os.system('cls')
+
         def hello2():
             os.system('cls')
             input('Hello World!\n\n\nPress ENTER to continue.')
@@ -57,7 +58,7 @@ def menu():
                             menu_harmoniczny()
                             loop = False
                         else:
-                            print('Podaj liczbę z przedziału ( 1 - 1 000 000 )')
+                            print('Podaj liczbę z przedziału (1 - 1 000 000)')
                         break
                 except ValueError:
                     print('To nie jest liczba!')
@@ -89,10 +90,15 @@ def menu():
         def horner():
             powtorz = 0
             while powtorz == 0:
+                n = input('Podaj stopień wielomianu: \n')
                 try:
-                    n = int(input('Podaj stopień wielomianu: \n'))
+                    n = int(n)
                 except ValueError:
-                    print('To nie jest liczba!')
+                    if n == 'e':
+                        m = input("Zakończyć? ")
+
+                    else:
+                        print('To nie jest liczba!')
                 else:
                     if n < 2 or n > 12:
                         print('Podaj liczbę z przedziału (2 - 12)')
@@ -144,11 +150,11 @@ def menu():
                                         m = n - 1
 
                                         print('Wynik: ')
-                                        print('( x -', c, ')( ', end="")
+                                        print('(x - ', c,')(', end="", sep='')
                                         for i in range(0, n - 1):
-                                            print(tablica2[i], 'x ^', m, ' +  ', end='')
+                                            print(tablica2[i], 'x^', m, ' + ', end='', sep='')
                                             m = m - 1
-                                        print(tablica2[-3], 'x +  ', tablica2[-2], ')  i ', tablica2[-1], ' reszty.')
+                                        print(tablica2[-3], 'x + ', tablica2[-2],') i ', tablica2[-1], ' reszty.',sep='')
                                         print('\n ### KONIEC ### ')
                                         horner_menu()
                                     else:
