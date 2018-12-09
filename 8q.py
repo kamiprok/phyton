@@ -1,4 +1,4 @@
-def czyMoze(dane, x, y):
+def czy_moze(dane, x, y):
 	for i in range(0, len(dane)):
 		przesx = abs(i - x)
 		przesy = abs(dane[i] - y)
@@ -6,22 +6,24 @@ def czyMoze(dane, x, y):
 			return False
 	return True
 
-def ustawHetmana(dane, n):
+
+def ustaw_hetmana(dane, n):
 	ile = 0
 	if (len(dane) == n):
 		return 1
 	else:
 		for k in range(0, n):
-			if (czyMoze(dane, len(dane), k)):
+			if (czy_moze(dane, len(dane), k)):
 				dane.append(k)
-				ile += ustawHetmana(dane, n)
+				ile += ustaw_hetmana(dane, n)
 				dane.pop()
 	return ile
 
-def szukajRozwiazan(n):
+
+def szukaj_rozwiazan(n):
 	dane = []
-	return ustawHetmana(dane, n)
+	return ustaw_hetmana(dane, n)
 
 n = int(input("Podaj wielkość planszy [n] : "))
-w = szukajRozwiazan(n)
+w = szukaj_rozwiazan(n)
 print("Rozwiązań: " + str(w))

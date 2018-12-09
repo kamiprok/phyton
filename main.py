@@ -3,9 +3,9 @@ import sys
 import time
 
 def menu():
-    print("Current Python version: ", sys.version_info)
     os.system('cls')
-    print('Witaj\n')
+    print("Current Python version: ", sys.version)
+    print('\nWitaj\n')
     print('Wybierz z listy który program chcesz uruchomić (1 - 5) :\n')
     print('1. Hello World!')
     print('2. Harmoniczny')
@@ -222,7 +222,37 @@ def menu():
         hanoiMain()
     if x == '5':
         os.system('cls')
-        print('nic tu nie ma jeszcze')
+        print('8 Hetmanów (early access)')
+
+        def czy_moze(dane, x, y):
+            for i in range(0, len(dane)):
+                przesx = abs(i - x)
+                przesy = abs(dane[i] - y)
+                if (dane[i] == y or przesx == przesy):
+                    return False
+            return True
+
+        def ustaw_hetmana(dane, n):
+            ile = 0
+            if (len(dane) == n):
+                return 1
+            else:
+                for k in range(0, n):
+                    if (czy_moze(dane, len(dane), k)):
+                        dane.append(k)
+                        ile += ustaw_hetmana(dane, n)
+                        dane.pop()
+            return ile
+
+        def szukaj_rozwiazan(n):
+            dane = []
+            return ustaw_hetmana(dane, n)
+
+        n = int(input("Podaj wielkość planszy [n] : "))
+        w = szukaj_rozwiazan(n)
+        print("Rozwiązań: " + str(w))
+
+
         input('\n\nPress ENTER to continue.')
         menu()
     elif x == 'e':
