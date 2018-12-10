@@ -222,7 +222,6 @@ def menu():
         hanoi_main()
     if x == '5':
         os.system('cls')
-        print('8 Hetmanów (early access)')
 
         def czy_moze(dane, x, y):
             for i in range(0, len(dane)):
@@ -248,13 +247,32 @@ def menu():
             dane = []
             return ustaw_hetmana(dane, n)
 
-        n = int(input("Podaj wielkość planszy [n] : "))
-        w = szukaj_rozwiazan(n)
-        print("Rozwiązań: " + str(w))
+        def queens_menu():
+            print('\nMenu: ')
+            print("1. Powtórz ")
+            print('e. Exit ')
+            choice = input("\nWybierz opcję: ")
+            loop = True
+            while loop:
+                if choice == '1':
+                    loop = False
+                    os.system('cls')
+                    glowny()
+                if choice == 'e':
+                    loop = False
+                    os.system('cls')
+                    menu()
+                else:
+                    choice = input('Zły wybór. Wybierz ponownie: ')
 
+        def glowny():
+            os.system('cls')
+            n = int(input("Podaj wielkość planszy [n] : "))
+            w = szukaj_rozwiazan(n)
+            print("Rozwiązań: " + str(w))
+            queens_menu()
 
-        input('\n\nPress ENTER to continue.')
-        menu()
+        glowny()
     elif x == 'e':
         print('\nŻegnaj')
         time.sleep(0.5)
