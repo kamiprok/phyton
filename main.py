@@ -11,7 +11,7 @@ def menu():
     print('2. Harmoniczny')
     print('3. Horner')
     print('4. Hanoi')
-    print('5. 8 Queens')
+    print('5. 8 Hetmanów')
     print('\n\ne. Wyjście')
     print('\nWybierz program: ', end='')
     x = input()
