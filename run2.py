@@ -1,6 +1,12 @@
 def podaj_liczbe():
     n = input('Podaj liczbę: ')
     print('Wybrałeś:', n)
+    try:
+        n = float(n)
+        print(type(n))
+    except ValueError:
+        print('To nie jest liczba!')
+        podaj_liczbe()
     powtorz()
 
 
