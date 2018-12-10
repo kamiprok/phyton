@@ -12,7 +12,7 @@ def hanoi_menu():
         if choice == '1':
             loop = False
             os.system('cls')
-            hanoiMain()
+            hanoi_main()
         if choice == 'e':
             loop = False
             os.system('cls')
@@ -20,7 +20,7 @@ def hanoi_menu():
         else:
             choice = input('Zły wybór. Wybierz ponownie: ')
 
-def hanoiMain():
+def hanoi_main():
     powtorz = 0
     while powtorz == 0:
         global count
@@ -53,4 +53,4 @@ def hanoiMain():
                 hanoi_menu()
             else:
                 print('Podaj liczbę od 1 do 14')
-hanoiMain()
+hanoi_main()

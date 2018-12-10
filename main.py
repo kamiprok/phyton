@@ -176,7 +176,7 @@ def menu():
                 if choice == '1':
                     loop = False
                     os.system('cls')
-                    hanoiMain()
+                    hanoi_main()
                 if choice == 'e':
                     loop = False
                     os.system('cls')
@@ -184,7 +184,7 @@ def menu():
                 else:
                     choice = input('Zły wybór. Wybierz ponownie: ')
 
-        def hanoiMain():
+        def hanoi_main():
             powtorz = 0
             while powtorz == 0:
                 global count
@@ -219,7 +219,7 @@ def menu():
                     else:
                         print('Podaj liczbę od 1 do 20')
 
-        hanoiMain()
+        hanoi_main()
     if x == '5':
         os.system('cls')
         print('8 Hetmanów (early access)')
