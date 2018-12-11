@@ -1,26 +1,30 @@
 def podaj_liczbe():
-    n = input('Podaj liczbę: ')
-    print('Wybrałeś:', n)
-    try:
-        n = float(n)
-        print(type(n))
-    except ValueError:
-        print('To nie jest liczba!')
-        podaj_liczbe()
-    powtorz()
+
+    while True:
+        try:
+            n = int(input('Podaj liczbę od 1 do 9: '))
+            if n > 0 and n < 10:
+                return n
+            else:
+                print('Wybierz inną liczbę [', n, ']')
+        except ValueError:
+            print('Podana wartość nie jest liczbą.')
 
 
 def powtorz():
     print('1. Powtórz\n2. Zakończ')
-    n = input('Wybierz: ')
+    m = input('Wybierz: ')
     loop = True
     while loop:
-        if n == '1':
+        if m == '1':
             podaj_liczbe()
-        if n == '2':
+        if m == '2':
             exit(0)
         else:
-            n = input('Wbyierz ponownie: ')
+            print('Wybierz 1 lub 2')
+            m = input('Wbyierz ponownie: ')
 
 
-podaj_liczbe()
+n = podaj_liczbe()
+print('Wybrałeś', n)
+powtorz()
