@@ -29,7 +29,7 @@ def harmoniczny():
                     sum = int(0)
                     for x in range(1,n+1):
                         sum+=1/x
-                    print('Wynik:', sum)
+                    print('Wynik:', round(sum, 4))
                     menu_harmoniczny()
                     loop = False
                 else:
