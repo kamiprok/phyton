@@ -28,11 +28,7 @@ def horner():
         try:
             n = int(n)
         except ValueError:
-            if n == 'e':
-                m = input("Zakończyć? ")
-
-            else:
-                print('To nie jest liczba!')
+            print('To nie jest liczba!')
         else:
             if n < 2 or n > 12:
                 print('Podaj liczbę z przedziału (2 - 12)')
@@ -85,7 +81,7 @@ def horner():
 
                                 print('Wynik: ')
                                 print('(x - ', c, ')(', end="", sep='')
-                                for i in range(0, n - 1):
+                                for i in range(0, n - 2):
                                     print(tablica2[i], 'x^', m, ' + ', end='', sep='')
                                     m = m - 1
                                 print(tablica2[-3], 'x + ', tablica2[-2], ') i ', tablica2[-1], ' reszty.', sep='')
