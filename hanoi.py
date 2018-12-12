@@ -2,6 +2,7 @@ import os
 import sys
 import time
 
+
 def hanoi_menu():
     print('\nMenu: ')
     print("1. Powtórz ")
@@ -19,6 +20,7 @@ def hanoi_menu():
             menu()
         else:
             choice = input('Zły wybór. Wybierz ponownie: ')
+
 
 def hanoi_main():
     powtorz = 0
@@ -53,4 +55,6 @@ def hanoi_main():
                 hanoi_menu()
             else:
                 print('Podaj liczbę od 1 do 14')
+
+
 hanoi_main()

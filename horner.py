@@ -1,6 +1,5 @@
 import os
 import sys
-import msvcrt
 
 
 def horner_menu():
@@ -97,7 +96,5 @@ def horner():
                         else:
                             print('Wybierz inną liczbę...')
 
-
-horner()
 
 horner()

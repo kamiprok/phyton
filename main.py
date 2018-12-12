@@ -2,6 +2,7 @@ import os
 import sys
 import time
 
+
 def menu():
     os.system('cls')
     print("Current Python version: ", sys.version)
@@ -273,6 +274,7 @@ def menu():
             queens_menu()
 
         glowny()
+
     elif x == 'e':
         print('\nŻegnaj')
         time.sleep(0.5)

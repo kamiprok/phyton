@@ -38,4 +38,5 @@ def harmoniczny():
         except ValueError:
             print('To nie jest liczba!')
 
+
 harmoniczny()
