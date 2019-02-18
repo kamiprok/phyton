@@ -1,3 +1,3 @@
 # python-szkola
 
-Apps for my varoius colleage classes
+Apps for varoius colleage classes
