@@ -26,6 +26,7 @@ def hanoi_main():
     powtorz = 0
     while powtorz == 0:
         global count
+        
         def hanoi(n, P1, P2, P3):
             if n == 0:
                 return
